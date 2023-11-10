@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { GeneratorComponent } from './components/generator/generator.component';
 import { GeneratorInputComponent } from './components/Generator/generator-input/generator-input.component';
 import { GeneratorDisplayComponent } from './components/Generator/generator-display/generator-display.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GeneratorDisplayComponent } from './components/Generator/generator-disp
     GeneratorDisplayComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

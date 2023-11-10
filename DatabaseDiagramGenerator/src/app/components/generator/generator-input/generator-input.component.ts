@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-generator-input',
   templateUrl: './generator-input.component.html',
   styleUrls: ['./generator-input.component.scss']
 })
-export class GeneratorInputComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class GeneratorInputComponent {
+  entry = new FormControl('');
 }
