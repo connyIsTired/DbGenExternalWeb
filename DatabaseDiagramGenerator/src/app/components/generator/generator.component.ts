@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-generator',
@@ -7,6 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class GeneratorComponent {
   entryChange!: string;
+  constructor(private sanitize: DomSanitizer){}
 
   onEntryChange(e:string){
     this.entryChange = e;
