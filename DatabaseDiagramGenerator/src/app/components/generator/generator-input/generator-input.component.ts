@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,6 +6,13 @@ import { FormControl } from '@angular/forms';
   templateUrl: './generator-input.component.html',
   styleUrls: ['./generator-input.component.scss']
 })
-export class GeneratorInputComponent {
-  entry = new FormControl('');
+export class GeneratorInputComponent implements OnInit {
+  @Output() entryChange = new EventEmitter<string>();
+  entry = new FormControl('',{updateOn: 'change'});
+
+  ngOnInit(): void {
+    this.entry.valueChanges.subscribe((value) => {
+      this.entryChange.emit(value);
+    });
+  }
 }

@@ -1,2 +1,2 @@
-<app-generator-input></app-generator-input>
-<app-generator-display></app-generator-display>
+<app-generator-input (entryChange)=onEntryChange($event)></app-generator-input>
+<app-generator-display [html]="entryChange"></app-generator-display>

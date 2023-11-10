@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-generator',
   templateUrl: './generator.component.html',
   styleUrls: ['./generator.component.scss']
 })
-export class GeneratorComponent implements OnInit {
+export class GeneratorComponent {
+  entryChange!: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onEntryChange(e:string){
+    this.entryChange = e;
   }
-
 }
