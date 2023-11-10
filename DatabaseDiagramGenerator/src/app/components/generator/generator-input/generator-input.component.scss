@@ -1,5 +1,11 @@
-textarea {
-  height: 90vh;
+:host{
   width: 33vw;
+  height: 90vh;
+  display: flex;
+}
+textarea {
+  height: 75%;
+  width: 75%;
   margin: auto;
+  resize: none;
 }
